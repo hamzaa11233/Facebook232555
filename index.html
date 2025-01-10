@@ -1,0 +1,62 @@
+
+
+```
+<source src="https://موقعك.com/8dc38782a284be77ee3938e305bdaa3f.mp4" type="video/mp4">
+```
+
+إذا كان الفيديو على جهازك المحلي، استخدم المسار المحلي:
+
+```
+<source src="file:///المسار/8dc38782a284be77ee3938e305bdaa3f.mp4" type="video/mp4">
+```
+
+هنا الكود الكامل:
+
+```
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الفيديو</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .فيديو-محتوي {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="فيديو-محتوي">
+        <video autoplay controls onended="توجيه()">
+            <source src="8dc38782a284be77ee3938e305bdaa3f.mp4" type="video/mp4">
+            لا يدعم المتصفح الخاص بك عنصر الفيديو.
+        </video>
+    </div>
+
+    <script>
+        function توجيه() {
+            setTimeout(function() {
+                window.location.href = "https://www.google.com";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+```
